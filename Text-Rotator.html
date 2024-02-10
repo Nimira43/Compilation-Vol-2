@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Astloch&family=Honk&family=Miltonian&family=Rubik+Glitch+Pop&family=Workbench&display=swap" rel="stylesheet">
+    <title>Text Rotator</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(
+                169deg,
+                orangered,
+                darkblue);
+            font-family: 'Rubik Glitch Pop', system-ui;
+        }
+        h1 {
+            font-size: 50px;
+            color: khaki;
+            text-shadow: 2px 2px 2px teal;
+        }
+        span:before {
+            content: 'Game Dev';
+            text-transform: uppercase;
+            font-family: 'Ashloch', system-ui;
+            color:limegreen;
+            animation: word-switch 8s infinite;
+        }
+        @keyframes word-switch {
+            0% { 
+                content: 'game dev';
+                color: limegreen;
+            }
+            20% { 
+                content: 'web dev';
+                color: orange;
+            }
+            40% { 
+                content: '3D dev';
+                color: cyan;
+            }
+            60% { 
+                content: 'data science';
+                color: red;
+            }
+            80% { 
+                content: 'cyber security';
+                color: gold;
+            }
+            100% { 
+                content: 'data science';
+                color: beige;
+            }
+        }
+    </style>
+</head>
+<body>
+   <h1>Nimira Tech &copy; 2024 <span></span></h1> 
+</body>
+</html>

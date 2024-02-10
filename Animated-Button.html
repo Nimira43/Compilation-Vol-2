@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Astloch&family=Honk&family=Miltonian&family=Rubik+Glitch+Pop&family=Workbench&display=swap" rel="stylesheet">
+    <title>Animated Button</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: mediumvioletred;
+            overflow: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            font-family: 'Honk', sans-serif;
+            font-size: 60px;
+            border: 25px double indigo;
+            border-radius: 20px;
+            padding: 20px 40px; 
+            position: relative;
+            overflow: hidden;
+            box-shadow: -6px 6px 22px rgba(0, 0, 0, 0.8);
+        }
+
+        a:before {
+            content: '';
+            background-color: chartreuse;
+            top: 0;
+            left: 0;
+            width: 120px;
+            height: 100%;
+            position: absolute;
+            z-index: -1;
+            transform: skew(-20deg);
+            animation: move 1.2s linear infinite;
+            transition: all 0.5s;
+        }
+
+        @keyframes move {
+            from {
+                left: -120px;
+            }
+            to {
+                left: 100%;
+            }    
+        }
+
+        a:hover:before {
+            width: 100%;
+            transform: skew(0deg);
+            border: 25px double lawngreen;
+            animation: none;
+        }
+    </style>
+</head>
+<body>
+    <a href="#">Animated Button</a>
+</body>
+</html>
