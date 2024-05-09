@@ -5,7 +5,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Caveat', cursive;
+  font-family: 'Montserrat', sans-serif;
   background-color: darkgreen;
 }
 
@@ -17,9 +17,8 @@ ul {
 }
 
 ul li a {
-  color: gold;
+  color: yellow;
   font-size: 25px;
-  font-weight: bolder;
   text-decoration: none;
   text-transform: uppercase;
   padding: 5px 10px;
@@ -28,13 +27,38 @@ ul li a {
   transition: all 0.5s;
 }
 
-a:before {
+a:before,
+a:after {
   content: '';
   position: absolute;
-  bottom: 0;
-  left: 0;
   width: 12px;
   height: 12px;
-  background-color: white;
+  border: 3px solid orangered;
+  opacity: 0;
+  transition: all 0.3s;
 }
 
+a:before {
+  bottom: 12px;
+  left: 12px;
+  border-width: 0 0 3px 3px; 
+/* border-width args: top, right, bottom, left */
+}
+
+a:hover:before {
+  opacity: 1;
+  bottom: -8px;
+  left: -8px;
+}
+
+a:after {
+  top: 8px;
+  right: 8px;
+  border-width: 3px 3px 0 0; 
+}
+
+a:hover:after {
+  opacity: 1;
+  top: -8px;
+  right: -8px;
+}
