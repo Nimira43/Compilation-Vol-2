@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Cedarville+Cursive&family=Chivo+Mono:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Sacramento&display=swap');
 
 body {
+  margin: 0;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: 'Montserrat', sans-serif;
-  background-color: darkgreen;
+  background-color:skyblue;
 }
 
 ul {
@@ -17,53 +18,50 @@ ul {
 }
 
 ul li a {
-  color: yellow;
-  font-size: 25px;
+  display: block;
+  width: 120px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
   text-decoration: none;
   text-transform: uppercase;
-  padding: 5px 10px;
-  margin: 0px 10px;
   position: relative;
   transition: all 0.5s;
+  color: #121212;
 }
 
 a:hover {
-  background-color: yellow;
-  color: darkgreen;
+  color: beige;
 }
 
-a:before,
-a:after {
-  content: '';
+ul li span {
   position: absolute;
-  width: 12px;
-  height: 12px;
-  border: 3px solid yellow;
-  opacity: 0;
-  transition: all 0.3s;
+  width: 25%;
+  height: 100%;
+  background-color: #121212;
+  z-index: -1;
+  left: 0;
+  top: 0;
+  transform: scaleY(0);
+  transition: all 0.5s;
+  transform-origin: top;
 }
 
-a:before {
-  bottom: 12px;
-  left: 12px;
-  border-width: 0 0 3px 3px; 
-/* border-width args: top, right, bottom, left */
+a:hover span {
+  transform: scaleY(1);
 }
 
-a:hover:before {
-  opacity: 1;
-  bottom: -8px;
-  left: -8px;
+span:nth-child(2) {
+  left: 25%;
+  transition-delay: 0.15s;
 }
 
-a:after {
-  top: 8px;
-  right: 8px;
-  border-width: 3px 3px 0 0; 
+span:nth-child(3) {
+  left: 50%;
+  transition-delay: 0.3s;
 }
 
-a:hover:after {
-  opacity: 1;
-  top: -8px;
-  right: -8px;
+span:nth-child(4) {
+  left: 75%;
+  transition-delay: 0.45s;
 }
